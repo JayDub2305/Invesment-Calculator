@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment & Return Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Investment & Return Calculator</h1>
+    <form id="investmentForm">
+      <label for="initialAmount">Initial Investment ($):</label>
+      <input type="number" id="initialAmount" placeholder="Enter initial investment" required>
+      
+      <label for="monthlyContribution">Monthly Contribution ($):</label>
+      <input type="number" id="monthlyContribution" placeholder="Enter monthly contribution" required>
+      
+      <label for="years">Investment Duration (Years):</label>
+      <input type="number" id="years" placeholder="Enter number of years" required>
+      
+      <label for="rateOfReturn">Expected Annual Rate of Return (%):</label>
+      <input type="number" id="rateOfReturn" placeholder="Enter annual rate of return" required>
+      
+      <label for="compoundFrequency">Compound Frequency:</label>
+      <select id="compoundFrequency">
+        <option value="1">Annually</option>
+        <option value="12">Monthly</option>
+      </select>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results" class="hidden">
+      <h2>Results:</h2>
+      <p>Total Contributions: $<span id="totalContributions"></span></p>
+      <p>Total Return: $<span id="totalReturn"></span></p>
+      <p>Final Value (Future Value): $<span id="finalValue"></span></p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
